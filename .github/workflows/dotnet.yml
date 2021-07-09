@@ -19,3 +19,12 @@ jobs:
         dotnet-version: 5.0.x
     - name: Add msbuild
       uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+      
+    - name: Restore NuGet packages
+      run: nuget restore AspNetCore.sln
+      
+    - name: Build the Solution with msbuild
+      run: msbuild AspNetCore.sln
