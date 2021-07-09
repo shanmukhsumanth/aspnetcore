@@ -13,11 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-    - name: Add msbuild
+    
+    - name: Setup MSbuild
       uses: microsoft/setup-msbuild@v1
       
     - name: Setup NuGet
