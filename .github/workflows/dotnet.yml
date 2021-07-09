@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 1.7.139
+        dotnet-version: 2.278.0
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
       with:
