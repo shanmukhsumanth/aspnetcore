@@ -20,8 +20,6 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
       
-    - name: Restore NuGet packages
-      run: nuget restore AspNetCore.sln
       
     - name: Build the Solution with msbuild
-      run: msbuild AspNetCore.sln
+      run: msbuild AspNetCore.sln -t:restore,build -p:RestorePackagesConfig=true
